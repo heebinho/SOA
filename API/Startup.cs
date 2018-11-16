@@ -16,6 +16,8 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.Extensions.PlatformAbstractions;
 using API;
+using Microsoft.EntityFrameworkCore;
+using API.Model;
 
 namespace CLS
 {
@@ -65,6 +67,11 @@ namespace CLS
                     // integrate xml comments
                     options.IncludeXmlComments(XmlCommentsFilePath);
                 });
+
+
+            services.AddDbContext<TnRContext>(
+                options => options.UseSqlite("Data Source=TnR.db"));
+
 
         }
 

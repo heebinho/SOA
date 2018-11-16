@@ -4,11 +4,103 @@
         <name>API</name>
     </assembly>
     <members>
+        <member name="T:API.Controllers.JobsController">
+            <summary>
+            Jobs
+            </summary>
+        </member>
+        <member name="T:API.Controllers.ProjectsController">
+            <summary>
+            Projects
+            </summary>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.Get">
+            <summary>
+            GET: api/Projects
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:API.Controllers.ProjectsController.Delete(System.Int32)">
             <summary>
             Delete a project.
             </summary>
             <param name="id"></param>
+        </member>
+        <member name="T:API.Model.Job">
+            <summary>
+            Job Model
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Id">
+            <summary>
+            Identifier UUID of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Description">
+            <summary>
+            Description of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.StatusCode">
+            <summary>
+            Status code
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.ProjectId">
+            <summary>
+            Project id
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.Project">
+            <summary>
+            Project Entity
+            </summary>
+        </member>
+        <member name="T:API.Model.Project">
+            <summary>
+            Project Model
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Id">
+            <summary>
+            Identifier UUID of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Description">
+            <summary>
+            Description of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.StatusCode">
+            <summary>
+            Status code
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Jobs">
+            <summary>
+            Jobs
+            </summary>
+        </member>
+        <member name="T:API.Model.TnRContext">
+            <summary>
+            Translation and Revision Model
+            </summary>
+        </member>
+        <member name="M:API.Model.TnRContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{API.Model.TnRContext})">
+            <summary>
+            ctor
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:API.Model.TnRContext.Projects">
+            <summary>
+            Project set
+            </summary>
+        </member>
+        <member name="P:API.Model.TnRContext.Jobs">
+            <summary>
+            Jobs set
+            </summary>
         </member>
         <member name="T:API.SwaggerDefaultValues">
             <summary>
@@ -23,6 +115,24 @@
             </summary>
             <param name="operation">The operation to apply the filter to.</param>
             <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:CLS.Program">
+            <summary>
+            Prog
+            </summary>
+        </member>
+        <member name="M:CLS.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:CLS.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            CreateWebHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

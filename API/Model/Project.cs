@@ -11,7 +11,7 @@ namespace API.Model
     public class Project
     {
         /// <summary>
-        /// Identifier UUID of the project
+        /// Identifier of the project
         /// </summary>
         public int Id { get; set; }
 

@@ -9,22 +9,92 @@
             Jobs
             </summary>
         </member>
+        <member name="M:API.Controllers.JobsController.#ctor(API.Model.TnRContext)">
+            <summary>
+            ctor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:API.Controllers.JobsController.GetJobs">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.GetJob(System.Int32)">
+            <summary>
+            Get
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.PutJob(System.Int32,API.Model.Job)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="job"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.PostJob(API.Model.Job)">
+            <summary>
+            Post
+            </summary>
+            <param name="job"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.JobsController.DeleteJob(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:API.Controllers.ProjectsController">
             <summary>
             Projects
             </summary>
         </member>
-        <member name="M:API.Controllers.ProjectsController.Get">
+        <member name="M:API.Controllers.ProjectsController.#ctor(API.Model.TnRContext)">
             <summary>
-            GET: api/Projects
+            ctor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.GetProjects">
+            <summary>
+            Projects
             </summary>
             <returns></returns>
         </member>
-        <member name="M:API.Controllers.ProjectsController.Delete(System.Int32)">
+        <member name="M:API.Controllers.ProjectsController.GetProject(System.Int32)">
             <summary>
-            Delete a project.
+            Get
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.PutProject(System.Int32,API.Model.Project)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.PostProject(API.Model.Project)">
+            <summary>
+            Post
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.ProjectsController.DeleteProject(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
         </member>
         <member name="T:API.Model.Job">
             <summary>
@@ -63,7 +133,7 @@
         </member>
         <member name="P:API.Model.Project.Id">
             <summary>
-            Identifier UUID of the project
+            Identifier of the project
             </summary>
         </member>
         <member name="P:API.Model.Project.Description">
@@ -115,6 +185,43 @@
             </summary>
             <param name="operation">The operation to apply the filter to.</param>
             <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:CLS.Controllers.ValuesController">
+            <summary>
+            Values
+            </summary>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Get">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            Get
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            Post
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CLS.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
         </member>
         <member name="T:CLS.Program">
             <summary>

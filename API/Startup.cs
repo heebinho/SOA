@@ -50,6 +50,7 @@ namespace CLS
             services.AddSwaggerGen(
                 options =>
                 {
+                    
                     // resolve the IApiVersionDescriptionProvider service
                     // note: that we have to build a temporary service provider here because one has not been created yet
                     var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
@@ -119,14 +120,18 @@ namespace CLS
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseSwagger();
+            app.UseSwagger(options=>
+            {
+                options.RouteTemplate = "docs/{documentName}/openapi.json";
+            });
             app.UseSwaggerUI(
                  options =>
                  {
+                     options.RoutePrefix = "docs";
                      // build a swagger endpoint for each discovered API version
                      foreach (var description in provider.ApiVersionDescriptions)
                      {
-                         options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                         options.SwaggerEndpoint($"/docs/{description.GroupName}/openapi.json", description.GroupName.ToUpperInvariant());
                      }
                  });
         }

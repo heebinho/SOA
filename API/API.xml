@@ -103,17 +103,27 @@
         </member>
         <member name="P:API.Model.Job.Id">
             <summary>
-            Identifier UUID of the project
+            Identifier of the job
             </summary>
         </member>
-        <member name="P:API.Model.Job.Description">
+        <member name="P:API.Model.Job.Created">
             <summary>
-            Description of the project
+            Creation date
             </summary>
         </member>
-        <member name="P:API.Model.Job.StatusCode">
+        <member name="P:API.Model.Job.Modified">
             <summary>
-            Status code
+            Modified date
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.SourceLanguage">
+            <summary>
+            Source language code (ISO-Standard: eg. DE)
+            </summary>
+        </member>
+        <member name="P:API.Model.Job.TargetLanguage">
+            <summary>
+            Source language code (ISO-Standard: eg. EN)
             </summary>
         </member>
         <member name="P:API.Model.Job.ProjectId">
@@ -136,9 +146,24 @@
             Identifier of the project
             </summary>
         </member>
+        <member name="P:API.Model.Project.Name">
+            <summary>
+            Name of the project
+            </summary>
+        </member>
         <member name="P:API.Model.Project.Description">
             <summary>
             Description of the project
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Created">
+            <summary>
+            Creation date
+            </summary>
+        </member>
+        <member name="P:API.Model.Project.Modified">
+            <summary>
+            Modified date
             </summary>
         </member>
         <member name="P:API.Model.Project.StatusCode">

@@ -12,19 +12,29 @@ namespace API.Model
     public class Job
     {
         /// <summary>
-        /// Identifier UUID of the project
+        /// Identifier of the job
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Description of the project
+        /// Creation date
         /// </summary>
-        public string Description { get; set; }
+        public DateTime Created { get; set; }
 
         /// <summary>
-        /// Status code
+        /// Modified date
         /// </summary>
-        public string StatusCode { get; set; }
+        public DateTime Modified { get; set; }
+
+        /// <summary>
+        /// Source language code (ISO-Standard: eg. DE)
+        /// </summary>
+        public string SourceLanguage { get; set; }
+
+        /// <summary>
+        /// Source language code (ISO-Standard: eg. EN)
+        /// </summary>
+        public string TargetLanguage { get; set; }
 
         /// <summary>
         /// Project id

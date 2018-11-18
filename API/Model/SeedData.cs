@@ -19,14 +19,20 @@ namespace API.Model
                 context.Projects.Add(
                     new Project
                     {
-                        Description = "Newspaper"
+                        Name = "Daily News",
+                        Description = "Newspaper of the day",                        
+                        Created = DateTime.Now,
+                        Modified = DateTime.Now,
                     });
 
                 context.Projects.Add(
-                new Project
-                {
-                    Description = "Publication "
-                });
+                    new Project
+                    {
+                        Name = "Daily Evening News",
+                        Description = "Evening update",
+                        Created = DateTime.Now,
+                        Modified = DateTime.Now,
+                    });
 
                 context.SaveChanges();
             }

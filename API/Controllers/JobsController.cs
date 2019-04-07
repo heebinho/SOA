@@ -35,17 +35,27 @@ namespace API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [ProducesResponseType(typeof(Job), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(500)]
         public IEnumerable<Job> GetJobs()
         {
             return _context.Jobs;
         }
 
         /// <summary>
-        /// Get
+        /// Get a job ressource
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Job ressource - 200</returns>
+        /// <remarks>Usually a job describes that files should be translated to the specified target language!</remarks>
+        /// <response code="200">Job created</response>
+        /// <response code="400">Job has missing/invalid values</response>
+        /// <response code="500">Oops! Can't create your Job right now</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Job), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(500)]
         public async Task<IActionResult> GetJob([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -70,6 +80,7 @@ namespace API.Controllers
         /// <param name="job"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(Job), 201)]
         public async Task<IActionResult> PutJob([FromRoute] int id, [FromBody] Job job)
         {
             if (!ModelState.IsValid)
@@ -109,6 +120,7 @@ namespace API.Controllers
         /// <param name="job"></param>
         /// <returns></returns>
         [HttpPost]
+        [ProducesResponseType(typeof(Job), 201)]
         public async Task<IActionResult> PostJob([FromBody] Job job)
         {
             if (!ModelState.IsValid)

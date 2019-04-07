@@ -23,10 +23,14 @@
         </member>
         <member name="M:API.Controllers.JobsController.GetJob(System.Int32)">
             <summary>
-            Get
+            Get a job ressource
             </summary>
             <param name="id"></param>
-            <returns></returns>
+            <returns>Job ressource - 200</returns>
+            <remarks>Usually a job describes that files should be translated to the specified target language!</remarks>
+            <response code="200">Job created</response>
+            <response code="400">Job has missing/invalid values</response>
+            <response code="500">Oops! Can't create your Job right now</response>
         </member>
         <member name="M:API.Controllers.JobsController.PutJob(System.Int32,API.Model.Job)">
             <summary>
